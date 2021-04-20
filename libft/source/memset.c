@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   memset.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssantiag <ssantiag@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/15 09:02:57 by ssantiag          #+#    #+#             */
-/*   Updated: 2021/04/15 09:02:57 by ssantiag         ###   ########.fr       */
+/*   Created: 2021/04/19 20:24:53 by ssantiag          #+#    #+#             */
+/*   Updated: 2021/04/19 20:24:53 by ssantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(void)
+void	*memset(void *b, int c, size_t len)
 {
-	printf("Hello, World!\n");
-	return (0);
+	unsigned char	*temp;
+
+	temp = b;
+	while (len-- != 0)
+	{
+		*temp++ = c;
+	}
+	return (b);
 }

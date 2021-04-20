@@ -1,20 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssantiag <ssantiag@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/15 09:02:57 by ssantiag          #+#    #+#             */
-/*   Updated: 2021/04/15 09:02:57 by ssantiag         ###   ########.fr       */
+/*   Created: 2021/04/15 09:23:00 by ssantiag          #+#    #+#             */
+/*   Updated: 2021/04/15 09:23:00 by ssantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
-int	main(void)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	printf("Hello, World!\n");
-	return (0);
 }

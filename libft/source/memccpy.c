@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   memccpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssantiag <ssantiag@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/15 09:02:57 by ssantiag          #+#    #+#             */
-/*   Updated: 2021/04/15 09:02:57 by ssantiag         ###   ########.fr       */
+/*   Created: 2021/04/19 21:41:27 by ssantiag          #+#    #+#             */
+/*   Updated: 2021/04/19 21:41:27 by ssantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+typedef unsigned char	t_uchar;
 
-int	main(void)
+void	*memccpy(void *dst, const void *src, int c, size_t n)
 {
-	printf("Hello, World!\n");
-	return (0);
+	while (n-- != 0)
+	{
+		*(t_uchar *)dst++ = *(t_uchar *)src;
+		if (*(t_uchar *)src++ == (t_uchar)c)
+			return (dst);
+	}
+	return (NULL);
 }
