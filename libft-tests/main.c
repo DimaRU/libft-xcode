@@ -12,6 +12,7 @@
 
 #include "libft.h"
 #include <stdio.h>
+#include "libft-test.h"
 
 int	main(void)
 {

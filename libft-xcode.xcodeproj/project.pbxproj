@@ -40,6 +40,7 @@
 		0A9911C1262822610091F429 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		0A9911C7262822780091F429 /* ft_substr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_substr.c; sourceTree = "<group>"; };
 		0A9911CB262822FB0091F429 /* libft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libft.h; sourceTree = "<group>"; };
+		0AACC0CC262EA063006380AD /* libft-test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libft-test.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 		0A99117F26280A370091F429 /* libft-tests */ = {
 			isa = PBXGroup;
 			children = (
+				0AACC0CC262EA063006380AD /* libft-test.h */,
 				0A99118026280A370091F429 /* main.c */,
 			);
 			path = "libft-tests";
@@ -132,7 +134,6 @@
 				0A99117926280A370091F429 /* Sources */,
 				0A99117A26280A370091F429 /* Frameworks */,
 				0A99117B26280A370091F429 /* CopyFiles */,
-				53D61CD35304B66C5E0E05E4 /* Norminettelint run script */,
 			);
 			buildRules = (
 			);
@@ -209,21 +210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Norminette check script\nnorminette -c -w -x main.c\n";
-		};
-		53D61CD35304B66C5E0E05E4 /* Norminettelint run script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Norminettelint run script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Norminette check script\nnorminette -c -w -x main.c\n";
+			shellScript = "# Norminette check script\npwd\nnorminette -c -w ./libft\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

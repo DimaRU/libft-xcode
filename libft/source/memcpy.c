@@ -20,7 +20,7 @@ void	*memcpy(void *dst, const void *src, size_t n)
 	temp = dst;
 	while (n-- != 0)
 	{
-		*temp++ = *(t_uchar)src++;
+		*temp++ = *(t_uchar *)src++;
 	}
 	return (dst);
 }
