@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcpy.c                                           :+:      :+:    :+:   */
+/*   tests_common.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssantiag <ssantiag@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/19 21:36:27 by ssantiag          #+#    #+#             */
-/*   Updated: 2021/04/19 21:36:27 by ssantiag         ###   ########.fr       */
+/*   Created: 2021/04/20 09:53:08 by ssantiag          #+#    #+#             */
+/*   Updated: 2021/04/20 09:53:08 by ssantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-typedef unsigned char	t_uchar;
+#include "libft-tests.h"
+#include <stdio.h>
 
-void	*memcpy(void *dst, const void *src, size_t n)
+void compare(t_uchar *a, t_uchar *b, size_t n, char *error_message)
 {
-	t_uchar	*temp;
-
-	temp = dst;
-	while (n-- != 0)
-	{
-		*temp++ = *(t_uchar *)src++;
+	for (size_t i = 0; i < n; i++) {
+		if (a[i] != b[i]) printf("%s: %ld %d != %d\n", error_message, i, a[i], b[i]);
 	}
-	return (dst);
 }

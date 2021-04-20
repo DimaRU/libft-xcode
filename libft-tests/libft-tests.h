@@ -12,29 +12,35 @@
 
 #ifndef libft_test_h
 #define libft_test_h
+#include "libft.h"
 
-void	test_bzero(void);
-void	test_memset(void);
-void	test_memcpy(void);
-void	test_memccpy(void);
-void	test_memmove(void);
-void	test_memchr(void);
-void	test_memcmp(void);
-void	test_strlen(void);
-void	test_strlcpy(void);
-void	test_strlcat(void);
-void	test_strchr(void);
-void	test_strrchr(void);
-void	test_strnstr(void);
-void	test_strncmp(void);
-void	test_atoi(void);
-void	test_isalpha(void);
-void	test_isdigit(void);
-void	test_isalnum(void);
-void	test_isascii(void);
-void	test_isprint(void);
-void	test_tolower(void);
-void	test_toupper(void);
+typedef unsigned char	t_uchar;
+// Common tools
+void compare(t_uchar *a, t_uchar *b, size_t n, char *error_message);
+
+// Test per function
+void	test_ft_bzero(void);
+void	test_ft_memset(void);
+void	test_ft_memcpy(void);
+void	test_ft_memccpy(void);
+void	test_ft_memmove(void);
+void	test_ft_memchr(void);
+void	test_ft_memcmp(void);
+void	test_ft_strlen(void);
+void	test_ft_strlcpy(void);
+void	test_ft_strlcat(void);
+void	test_ft_strchr(void);
+void	test_ft_strrchr(void);
+void	test_ft_strnstr(void);
+void	test_ft_strncmp(void);
+void	test_ft_atoi(void);
+void	test_ft_isalpha(void);
+void	test_ft_isdigit(void);
+void	test_ft_isalnum(void);
+void	test_ft_isascii(void);
+void	test_ft_isprint(void);
+void	test_ft_tolower(void);
+void	test_ft_toupper(void);
 void	test_ft_substr(void);
 void	test_ft_strjoin(void);
 void	test_ft_strtrim(void);

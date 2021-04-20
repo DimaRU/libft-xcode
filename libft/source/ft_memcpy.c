@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssantiag <ssantiag@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/19 20:24:53 by ssantiag          #+#    #+#             */
-/*   Updated: 2021/04/19 20:24:53 by ssantiag         ###   ########.fr       */
+/*   Created: 2021/04/19 21:36:27 by ssantiag          #+#    #+#             */
+/*   Updated: 2021/04/19 21:36:27 by ssantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+typedef unsigned char	t_uchar;
 
-void	*memset(void *b, int c, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char	*temp;
+	t_uchar	*temp;
 
-	temp = b;
-	while (len-- != 0)
+	temp = dst;
+	while (n-- != 0)
 	{
-		*temp++ = c;
+		*temp++ = *(t_uchar *)src++;
 	}
-	return (b);
+	return (dst);
 }

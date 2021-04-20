@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memccpy.c                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssantiag <ssantiag@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/19 21:41:27 by ssantiag          #+#    #+#             */
-/*   Updated: 2021/04/19 21:41:27 by ssantiag         ###   ########.fr       */
+/*   Created: 2021/04/19 21:33:12 by ssantiag          #+#    #+#             */
+/*   Updated: 2021/04/19 21:33:12 by ssantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-typedef unsigned char	t_uchar;
 
-void	*memccpy(void *dst, const void *src, int c, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	while (n-- != 0)
-	{
-		*(t_uchar *)dst++ = *(t_uchar *)src;
-		if (*(t_uchar *)src++ == (t_uchar)c)
-			return (dst);
-	}
-	return (NULL);
+	ft_memset(s, 0, n);
 }

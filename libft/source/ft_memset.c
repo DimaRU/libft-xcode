@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssantiag <ssantiag@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/19 21:33:12 by ssantiag          #+#    #+#             */
-/*   Updated: 2021/04/19 21:33:12 by ssantiag         ###   ########.fr       */
+/*   Created: 2021/04/19 20:24:53 by ssantiag          #+#    #+#             */
+/*   Updated: 2021/04/19 20:24:53 by ssantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	memset(s, 0, n);
+	unsigned char	*temp;
+
+	temp = b;
+	while (len-- != 0)
+	{
+		*temp++ = c;
+	}
+	return (b);
 }

@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A57E39C262DF45E003B436E /* memset.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E39B262DF45E003B436E /* memset.c */; };
-		0A57E3A0262E0448003B436E /* bzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E39F262E0448003B436E /* bzero.c */; };
-		0A57E3A4262E0529003B436E /* memcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E3A3262E0529003B436E /* memcpy.c */; };
-		0A57E3A8262E062F003B436E /* memccpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E3A7262E062F003B436E /* memccpy.c */; };
+		0A57E39C262DF45E003B436E /* ft_memset.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E39B262DF45E003B436E /* ft_memset.c */; };
+		0A57E3A0262E0448003B436E /* ft_bzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E39F262E0448003B436E /* ft_bzero.c */; };
+		0A57E3A4262E0529003B436E /* ft_memcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E3A3262E0529003B436E /* ft_memcpy.c */; };
+		0A57E3A8262E062F003B436E /* ft_memccpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E3A7262E062F003B436E /* ft_memccpy.c */; };
 		0A99118126280A370091F429 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A99118026280A370091F429 /* main.c */; };
 		0A9911C4262822610091F429 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 0A9911C1262822610091F429 /* Makefile */; };
 		0A9911C8262822780091F429 /* ft_substr.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A9911C7262822780091F429 /* ft_substr.c */; };
-		0A9911CC262822FB0091F429 /* libft.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A9911CB262822FB0091F429 /* libft.h */; };
+		0AACC0DA262EB001006380AD /* test_ft_bzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AACC0D9262EB001006380AD /* test_ft_bzero.c */; };
+		0AACC0E1262EB1CF006380AD /* tests_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AACC0E0262EB1CF006380AD /* tests_common.c */; };
+		0AACC102262EBE18006380AD /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9911B9262822340091F429 /* libft.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AACC103262EBE18006380AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A99117526280A370091F429 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A9911B8262822340091F429;
+			remoteInfo = ft;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0A99117B26280A370091F429 /* CopyFiles */ = {
@@ -30,17 +42,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0A57E39B262DF45E003B436E /* memset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = memset.c; sourceTree = "<group>"; };
-		0A57E39F262E0448003B436E /* bzero.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bzero.c; sourceTree = "<group>"; };
-		0A57E3A3262E0529003B436E /* memcpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = memcpy.c; sourceTree = "<group>"; };
-		0A57E3A7262E062F003B436E /* memccpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = memccpy.c; sourceTree = "<group>"; };
+		0A57E39B262DF45E003B436E /* ft_memset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_memset.c; sourceTree = "<group>"; };
+		0A57E39F262E0448003B436E /* ft_bzero.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_bzero.c; sourceTree = "<group>"; };
+		0A57E3A3262E0529003B436E /* ft_memcpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_memcpy.c; sourceTree = "<group>"; };
+		0A57E3A7262E062F003B436E /* ft_memccpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_memccpy.c; sourceTree = "<group>"; };
 		0A99117D26280A370091F429 /* libft-tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "libft-tests"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A99118026280A370091F429 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0A9911B9262822340091F429 /* libft.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libft.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9911C1262822610091F429 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		0A9911C7262822780091F429 /* ft_substr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_substr.c; sourceTree = "<group>"; };
 		0A9911CB262822FB0091F429 /* libft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libft.h; sourceTree = "<group>"; };
-		0AACC0CC262EA063006380AD /* libft-test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libft-test.h"; sourceTree = "<group>"; };
+		0AACC0CC262EA063006380AD /* libft-tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libft-tests.h"; sourceTree = "<group>"; };
+		0AACC0D9262EB001006380AD /* test_ft_bzero.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_bzero.c; sourceTree = "<group>"; };
+		0AACC0E0262EB1CF006380AD /* tests_common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tests_common.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AACC102262EBE18006380AD /* libft.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,7 @@
 				0A9911C0262822610091F429 /* libft */,
 				0A99117F26280A370091F429 /* libft-tests */,
 				0A99117E26280A370091F429 /* Products */,
+				0AACC0F7262EBD7F006380AD /* Frameworks */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -85,8 +101,10 @@
 		0A99117F26280A370091F429 /* libft-tests */ = {
 			isa = PBXGroup;
 			children = (
-				0AACC0CC262EA063006380AD /* libft-test.h */,
+				0AACC0DD262EB013006380AD /* tests */,
+				0AACC0CC262EA063006380AD /* libft-tests.h */,
 				0A99118026280A370091F429 /* main.c */,
+				0AACC0E0262EB1CF006380AD /* tests_common.c */,
 			);
 			path = "libft-tests";
 			sourceTree = "<group>";
@@ -104,13 +122,28 @@
 		0A9911C3262822610091F429 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				0A57E39B262DF45E003B436E /* memset.c */,
-				0A57E39F262E0448003B436E /* bzero.c */,
-				0A57E3A3262E0529003B436E /* memcpy.c */,
-				0A57E3A7262E062F003B436E /* memccpy.c */,
+				0A57E39B262DF45E003B436E /* ft_memset.c */,
+				0A57E39F262E0448003B436E /* ft_bzero.c */,
+				0A57E3A3262E0529003B436E /* ft_memcpy.c */,
+				0A57E3A7262E062F003B436E /* ft_memccpy.c */,
 				0A9911C7262822780091F429 /* ft_substr.c */,
 			);
 			path = source;
+			sourceTree = "<group>";
+		};
+		0AACC0DD262EB013006380AD /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				0AACC0D9262EB001006380AD /* test_ft_bzero.c */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		0AACC0F7262EBD7F006380AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +153,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A9911CC262822FB0091F429 /* libft.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +170,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0AACC104262EBE18006380AD /* PBXTargetDependency */,
 			);
 			name = "libft-tests";
 			productName = "libft-xcode";
@@ -210,7 +243,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Norminette check script\npwd\nnorminette -c -w ./libft\n";
+			shellScript = "# Norminette check script\nnorminette -c -w ./libft\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -219,6 +252,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AACC0DA262EB001006380AD /* test_ft_bzero.c in Sources */,
+				0AACC0E1262EB1CF006380AD /* tests_common.c in Sources */,
 				0A99118126280A370091F429 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,16 +262,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A57E3A8262E062F003B436E /* memccpy.c in Sources */,
-				0A57E3A4262E0529003B436E /* memcpy.c in Sources */,
+				0A57E3A8262E062F003B436E /* ft_memccpy.c in Sources */,
+				0A57E3A4262E0529003B436E /* ft_memcpy.c in Sources */,
 				0A9911C8262822780091F429 /* ft_substr.c in Sources */,
 				0A9911C4262822610091F429 /* Makefile in Sources */,
-				0A57E3A0262E0448003B436E /* bzero.c in Sources */,
-				0A57E39C262DF45E003B436E /* memset.c in Sources */,
+				0A57E3A0262E0448003B436E /* ft_bzero.c in Sources */,
+				0A57E39C262DF45E003B436E /* ft_memset.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AACC104262EBE18006380AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A9911B8262822340091F429 /* ft */;
+			targetProxy = 0AACC103262EBE18006380AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0A99118226280A370091F429 /* Debug */ = {
