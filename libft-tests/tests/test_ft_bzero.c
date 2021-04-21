@@ -20,7 +20,7 @@ void test_ft_bzero(void)
 
 	printf("Start %s\n", __func__);
 	ft_bzero(pattern_work, 0);
-	compare(pattern_src, pattern_work, sizeof(pattern_src), "ft_bzero test 1 fail:");
+	compare(pattern_src, pattern_work, sizeof(pattern_src), __func__, "test 1 fail:");
 	ft_bzero(pattern_work, 4);
-	compare(pattern_dst, pattern_work, sizeof(pattern_src), "ft_bzero test 2 fail:");
+	compare(pattern_dst, pattern_work, sizeof(pattern_src), __func__, "test 2 fail:");
 }

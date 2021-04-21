@@ -17,7 +17,7 @@
 
 typedef unsigned char	t_uchar;
 // Common tools
-void compare(t_uchar *a, t_uchar *b, size_t n, char *error_message);
+void compare(t_uchar *a, t_uchar *b, size_t n, const char *name, char *error_message);
 
 // Test per function
 void	test_ft_bzero(void);

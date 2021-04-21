@@ -11,10 +11,9 @@
 		0A57E3A0262E0448003B436E /* ft_bzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E39F262E0448003B436E /* ft_bzero.c */; };
 		0A57E3A4262E0529003B436E /* ft_memcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E3A3262E0529003B436E /* ft_memcpy.c */; };
 		0A57E3A8262E062F003B436E /* ft_memccpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E3A7262E062F003B436E /* ft_memccpy.c */; };
-		0A57E3B0262F4B02003B436E /* test_ft_memset.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E3AF262F4B02003B436E /* test_ft_memset.c */; };
+		0A57E3E82630A114003B436E /* test_ft_memset.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E3E62630A114003B436E /* test_ft_memset.c */; };
 		0A99118126280A370091F429 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A99118026280A370091F429 /* main.c */; };
 		0A9911C4262822610091F429 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 0A9911C1262822610091F429 /* Makefile */; };
-		0A9911C8262822780091F429 /* ft_substr.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A9911C7262822780091F429 /* ft_substr.c */; };
 		0AACC0DA262EB001006380AD /* test_ft_bzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AACC0D9262EB001006380AD /* test_ft_bzero.c */; };
 		0AACC0E1262EB1CF006380AD /* tests_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AACC0E0262EB1CF006380AD /* tests_common.c */; };
 		0AACC102262EBE18006380AD /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9911B9262822340091F429 /* libft.a */; };
@@ -47,12 +46,11 @@
 		0A57E39F262E0448003B436E /* ft_bzero.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_bzero.c; sourceTree = "<group>"; };
 		0A57E3A3262E0529003B436E /* ft_memcpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_memcpy.c; sourceTree = "<group>"; };
 		0A57E3A7262E062F003B436E /* ft_memccpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_memccpy.c; sourceTree = "<group>"; };
-		0A57E3AF262F4B02003B436E /* test_ft_memset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_memset.c; sourceTree = "<group>"; };
+		0A57E3E62630A114003B436E /* test_ft_memset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_memset.c; sourceTree = "<group>"; };
 		0A99117D26280A370091F429 /* libft-tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "libft-tests"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A99118026280A370091F429 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0A9911B9262822340091F429 /* libft.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libft.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9911C1262822610091F429 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		0A9911C7262822780091F429 /* ft_substr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_substr.c; sourceTree = "<group>"; };
 		0A9911CB262822FB0091F429 /* libft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libft.h; sourceTree = "<group>"; };
 		0AACC0CC262EA063006380AD /* libft-tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libft-tests.h"; sourceTree = "<group>"; };
 		0AACC0D9262EB001006380AD /* test_ft_bzero.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_bzero.c; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				0A57E39F262E0448003B436E /* ft_bzero.c */,
 				0A57E3A3262E0529003B436E /* ft_memcpy.c */,
 				0A57E3A7262E062F003B436E /* ft_memccpy.c */,
-				0A9911C7262822780091F429 /* ft_substr.c */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -137,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				0AACC0D9262EB001006380AD /* test_ft_bzero.c */,
-				0A57E3AF262F4B02003B436E /* test_ft_memset.c */,
+				0A57E3E62630A114003B436E /* test_ft_memset.c */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -255,9 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A57E3B0262F4B02003B436E /* test_ft_memset.c in Sources */,
 				0AACC0DA262EB001006380AD /* test_ft_bzero.c in Sources */,
 				0AACC0E1262EB1CF006380AD /* tests_common.c in Sources */,
+				0A57E3E82630A114003B436E /* test_ft_memset.c in Sources */,
 				0A99118126280A370091F429 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +265,6 @@
 			files = (
 				0A57E3A8262E062F003B436E /* ft_memccpy.c in Sources */,
 				0A57E3A4262E0529003B436E /* ft_memcpy.c in Sources */,
-				0A9911C8262822780091F429 /* ft_substr.c in Sources */,
 				0A9911C4262822610091F429 /* Makefile in Sources */,
 				0A57E3A0262E0448003B436E /* ft_bzero.c in Sources */,
 				0A57E39C262DF45E003B436E /* ft_memset.c in Sources */,

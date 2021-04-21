@@ -13,9 +13,9 @@
 #include "libft-tests.h"
 #include <stdio.h>
 
-void compare(t_uchar *a, t_uchar *b, size_t n, char *error_message)
+void compare(t_uchar *a, t_uchar *b, size_t n, const char *name, char *error_message)
 {
 	for (size_t i = 0; i < n; i++) {
-		if (a[i] != b[i]) printf("%s: %ld %d != %d\n", error_message, i, a[i], b[i]);
+		if (a[i] != b[i]) printf("%s %s: %ld %d != %d\n", name, error_message, i, a[i], b[i]);
 	}
 }

@@ -17,5 +17,6 @@
 int	main(void)
 {
 	test_ft_bzero();
+	test_ft_memset();
 	return (0);
 }
