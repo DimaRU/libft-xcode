@@ -13,6 +13,7 @@
 #ifndef libft_test_h
 #define libft_test_h
 #include "libft.h"
+#include <stdio.h>
 
 typedef unsigned char	t_uchar;
 // Common tools
