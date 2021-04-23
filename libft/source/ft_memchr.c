@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssantiag <ssantiag@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/19 21:36:27 by ssantiag          #+#    #+#             */
-/*   Updated: 2021/04/19 21:36:27 by ssantiag         ###   ########.fr       */
+/*   Created: 2021/04/23 09:37:50 by ssantiag          #+#    #+#             */
+/*   Updated: 2021/04/23 09:37:50 by ssantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 typedef unsigned char	t_uchar;
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	t_uchar			*dest;
-	const t_uchar	*source;
-
-	dest = dst;
-	source = src;
-	while (n-- != 0)
+	while (n-- > 0)
 	{
-		*dest++ = *source++;
+		if (*(t_uchar *)s++ == (t_uchar) c)
+			return ((void *)s - 1);
 	}
-	return (dst);
+	return (NULL);
 }

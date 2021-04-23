@@ -15,20 +15,22 @@ typedef unsigned char	t_uchar;
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	t_uchar	*temp;
+	t_uchar			*dest;
+	const t_uchar	*source;
 
-	temp = dst;
 	if (src > dst)
 	{
+		dest = dst;
+		source = src;
 		while (len-- > 0)
-			*temp++ = *(t_uchar *)src++;
+			*dest++ = *source++;
 	}
 	else if (src < dst)
 	{
-		temp += len - 1;
-		src += len - 1;
+		dest = dst + len - 1;
+		source = src + len - 1;
 		while (len-- > 0)
-			*temp-- = *(t_uchar *)src--;
+			*dest-- = *source--;
 	}
 	return (dst);
 }

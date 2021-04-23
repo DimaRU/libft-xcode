@@ -21,8 +21,8 @@ int	main(void)
 	test_ft_memcpy();
 	test_ft_memccpy();
 	test_ft_memmove();
-//	test_ft_memchr();
-//	test_ft_memcmp();
+	test_ft_memchr();
+	test_ft_memcmp();
 //	test_ft_strlen();
 //	test_ft_strlcpy();
 //	test_ft_strlcat();
