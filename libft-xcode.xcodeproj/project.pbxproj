@@ -22,6 +22,8 @@
 		0A57E3A4262E0529003B436E /* ft_memcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E3A3262E0529003B436E /* ft_memcpy.c */; };
 		0A57E3A8262E062F003B436E /* ft_memccpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E3A7262E062F003B436E /* ft_memccpy.c */; };
 		0A57E3E82630A114003B436E /* test_ft_memset.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E3E62630A114003B436E /* test_ft_memset.c */; };
+		0A7546DC263463E200D69C33 /* test_ft_strlcat.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A7546DA263463E200D69C33 /* test_ft_strlcat.c */; };
+		0A7546DF263463E900D69C33 /* ft_strlcat.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A7546D9263463E200D69C33 /* ft_strlcat.c */; };
 		0A99118126280A370091F429 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A99118026280A370091F429 /* main.c */; };
 		0AACC0DA262EB001006380AD /* test_ft_bzero.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AACC0D9262EB001006380AD /* test_ft_bzero.c */; };
 		0AACC0E1262EB1CF006380AD /* tests_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AACC0E0262EB1CF006380AD /* tests_common.c */; };
@@ -68,6 +70,8 @@
 		0A57E3A3262E0529003B436E /* ft_memcpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_memcpy.c; sourceTree = "<group>"; };
 		0A57E3A7262E062F003B436E /* ft_memccpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_memccpy.c; sourceTree = "<group>"; };
 		0A57E3E62630A114003B436E /* test_ft_memset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_memset.c; sourceTree = "<group>"; };
+		0A7546D9263463E200D69C33 /* ft_strlcat.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_strlcat.c; sourceTree = "<group>"; };
+		0A7546DA263463E200D69C33 /* test_ft_strlcat.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_strlcat.c; sourceTree = "<group>"; };
 		0A99117D26280A370091F429 /* libft-tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "libft-tests"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A99118026280A370091F429 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0A9911B9262822340091F429 /* libft.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libft.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +158,7 @@
 				0A2483472632BD0C007DD851 /* ft_memcmp.c */,
 				0A2483522632F3EC007DD851 /* ft_strlen.c */,
 				0A24835B2632F7D8007DD851 /* ft_strlcpy.c */,
+				0A7546D9263463E200D69C33 /* ft_strlcat.c */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				0A2483482632BD0C007DD851 /* test_ft_memcmp.c */,
 				0A2483532632F3EC007DD851 /* test_ft_strlen.c */,
 				0A24835C2632F7D8007DD851 /* test_ft_strlcpy.c */,
+				0A7546DA263463E200D69C33 /* test_ft_strlcat.c */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -236,7 +242,7 @@
 		0A99117526280A370091F429 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					0A99117C26280A370091F429 = {
 						CreatedOnToolsVersion = 12.4;
@@ -293,6 +299,7 @@
 				0A24834A2632BD0C007DD851 /* test_ft_memcmp.c in Sources */,
 				0A3DE6D8263155C800E62219 /* test_ft_memccpy.c in Sources */,
 				0AACC0E1262EB1CF006380AD /* tests_common.c in Sources */,
+				0A7546DC263463E200D69C33 /* test_ft_strlcat.c in Sources */,
 				0A57E3E82630A114003B436E /* test_ft_memset.c in Sources */,
 				0A3DE6CE26314C5500E62219 /* test_ft_memcpy.c in Sources */,
 				0A99118126280A370091F429 /* main.c in Sources */,
@@ -314,6 +321,7 @@
 				0A2483582632F644007DD851 /* ft_strlen.c in Sources */,
 				0A57E39C262DF45E003B436E /* ft_memset.c in Sources */,
 				0AB9F00E2632A28F00DB3267 /* ft_memchr.c in Sources */,
+				0A7546DF263463E900D69C33 /* ft_strlcat.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
