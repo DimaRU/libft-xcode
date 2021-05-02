@@ -15,6 +15,10 @@
 		0A2483582632F644007DD851 /* ft_strlen.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A2483522632F3EC007DD851 /* ft_strlen.c */; };
 		0A24835E2632F7D8007DD851 /* test_ft_strlcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A24835C2632F7D8007DD851 /* test_ft_strlcpy.c */; };
 		0A2483612632F7DD007DD851 /* ft_strlcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A24835B2632F7D8007DD851 /* ft_strlcpy.c */; };
+		0A31FC28263E9F8700DB98B4 /* test_ft_strchr.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A31FC26263E9F8700DB98B4 /* test_ft_strchr.c */; };
+		0A31FC29263E9F8C00DB98B4 /* ft_strchr.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A31FC25263E9F8700DB98B4 /* ft_strchr.c */; };
+		0A31FC2D263EA5AC00DB98B4 /* test_ft_strrchr.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A31FC2B263EA5AC00DB98B4 /* test_ft_strrchr.c */; };
+		0A31FC2E263EA5B100DB98B4 /* ft_strrchr.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A31FC2A263EA5AC00DB98B4 /* ft_strrchr.c */; };
 		0A3DE6CE26314C5500E62219 /* test_ft_memcpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DE6CC26314C5500E62219 /* test_ft_memcpy.c */; };
 		0A3DE6D8263155C800E62219 /* test_ft_memccpy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A3DE6D6263155C800E62219 /* test_ft_memccpy.c */; };
 		0A57E39C262DF45E003B436E /* ft_memset.c in Sources */ = {isa = PBXBuildFile; fileRef = 0A57E39B262DF45E003B436E /* ft_memset.c */; };
@@ -63,6 +67,10 @@
 		0A2483532632F3EC007DD851 /* test_ft_strlen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_strlen.c; sourceTree = "<group>"; };
 		0A24835B2632F7D8007DD851 /* ft_strlcpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_strlcpy.c; sourceTree = "<group>"; };
 		0A24835C2632F7D8007DD851 /* test_ft_strlcpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_strlcpy.c; sourceTree = "<group>"; };
+		0A31FC25263E9F8700DB98B4 /* ft_strchr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_strchr.c; sourceTree = "<group>"; };
+		0A31FC26263E9F8700DB98B4 /* test_ft_strchr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_strchr.c; sourceTree = "<group>"; };
+		0A31FC2A263EA5AC00DB98B4 /* ft_strrchr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_strrchr.c; sourceTree = "<group>"; };
+		0A31FC2B263EA5AC00DB98B4 /* test_ft_strrchr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_strrchr.c; sourceTree = "<group>"; };
 		0A3DE6CC26314C5500E62219 /* test_ft_memcpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_memcpy.c; sourceTree = "<group>"; };
 		0A3DE6D6263155C800E62219 /* test_ft_memccpy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_memccpy.c; sourceTree = "<group>"; };
 		0A57E39B262DF45E003B436E /* ft_memset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_memset.c; sourceTree = "<group>"; };
@@ -159,6 +167,8 @@
 				0A2483522632F3EC007DD851 /* ft_strlen.c */,
 				0A24835B2632F7D8007DD851 /* ft_strlcpy.c */,
 				0A7546D9263463E200D69C33 /* ft_strlcat.c */,
+				0A31FC25263E9F8700DB98B4 /* ft_strchr.c */,
+				0A31FC2A263EA5AC00DB98B4 /* ft_strrchr.c */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -176,6 +186,8 @@
 				0A2483532632F3EC007DD851 /* test_ft_strlen.c */,
 				0A24835C2632F7D8007DD851 /* test_ft_strlcpy.c */,
 				0A7546DA263463E200D69C33 /* test_ft_strlcat.c */,
+				0A31FC26263E9F8700DB98B4 /* test_ft_strchr.c */,
+				0A31FC2B263EA5AC00DB98B4 /* test_ft_strrchr.c */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -300,9 +312,11 @@
 				0A3DE6D8263155C800E62219 /* test_ft_memccpy.c in Sources */,
 				0AACC0E1262EB1CF006380AD /* tests_common.c in Sources */,
 				0A7546DC263463E200D69C33 /* test_ft_strlcat.c in Sources */,
+				0A31FC2D263EA5AC00DB98B4 /* test_ft_strrchr.c in Sources */,
 				0A57E3E82630A114003B436E /* test_ft_memset.c in Sources */,
 				0A3DE6CE26314C5500E62219 /* test_ft_memcpy.c in Sources */,
 				0A99118126280A370091F429 /* main.c in Sources */,
+				0A31FC28263E9F8700DB98B4 /* test_ft_strchr.c in Sources */,
 				0A2483552632F3EC007DD851 /* test_ft_strlen.c in Sources */,
 				0A24835E2632F7D8007DD851 /* test_ft_strlcpy.c in Sources */,
 			);
@@ -313,6 +327,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A1041DE263298EA00A5116C /* ft_memmove.c in Sources */,
+				0A31FC29263E9F8C00DB98B4 /* ft_strchr.c in Sources */,
+				0A31FC2E263EA5B100DB98B4 /* ft_strrchr.c in Sources */,
 				0A57E3A8262E062F003B436E /* ft_memccpy.c in Sources */,
 				0A57E3A4262E0529003B436E /* ft_memcpy.c in Sources */,
 				0A2483612632F7DD007DD851 /* ft_strlcpy.c in Sources */,
