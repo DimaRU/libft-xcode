@@ -41,6 +41,9 @@ int	main(void)
 		test_ft_isprint,
 		test_ft_tolower,
 		test_ft_toupper,
+		test_ft_strdup,
+		test_ft_calloc,
+
 //		test_ft_substr,
 //		test_ft_strjoin,
 //		test_ft_strtrim,
@@ -51,7 +54,6 @@ int	main(void)
 //		test_ft_putstr_fd,
 //		test_ft_putendl_fd,
 //		test_ft_putnbr_fd,
-//		test_strdup,
 //		test_ft_lstnew,
 //		test_ft_lstadd_front,
 //		test_ft_lstsize,
