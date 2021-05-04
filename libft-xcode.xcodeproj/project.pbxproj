@@ -64,6 +64,8 @@
 		0AF1294B26412A3500663D67 /* ft_strjoin.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1294726412A2D00663D67 /* ft_strjoin.c */; };
 		0AF1294F26412FFF00663D67 /* test_ft_strtrim.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1294D26412FFF00663D67 /* test_ft_strtrim.c */; };
 		0AF129502641300700663D67 /* ft_strtrim.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1294C26412FFF00663D67 /* ft_strtrim.c */; };
+		0AF129542641385E00663D67 /* test_ft_split.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AF129522641385E00663D67 /* test_ft_split.c */; };
+		0AF129552641386400663D67 /* ft_split.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AF129512641385E00663D67 /* ft_split.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +152,8 @@
 		0AF1294826412A2D00663D67 /* test_ft_strjoin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_strjoin.c; sourceTree = "<group>"; };
 		0AF1294C26412FFF00663D67 /* ft_strtrim.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_strtrim.c; sourceTree = "<group>"; };
 		0AF1294D26412FFF00663D67 /* test_ft_strtrim.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_strtrim.c; sourceTree = "<group>"; };
+		0AF129512641385E00663D67 /* ft_split.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_split.c; sourceTree = "<group>"; };
+		0AF129522641385E00663D67 /* test_ft_split.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_ft_split.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,7 @@
 				0AF12942264122EB00663D67 /* ft_substr.c */,
 				0AF1294726412A2D00663D67 /* ft_strjoin.c */,
 				0AF1294C26412FFF00663D67 /* ft_strtrim.c */,
+				0AF129512641385E00663D67 /* ft_split.c */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				0AF12943264122EB00663D67 /* test_ft_substr.c */,
 				0AF1294826412A2D00663D67 /* test_ft_strjoin.c */,
 				0AF1294D26412FFF00663D67 /* test_ft_strtrim.c */,
+				0AF129522641385E00663D67 /* test_ft_split.c */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 				0A31FC3C263ECA5300DB98B4 /* test_ft_atoi.c in Sources */,
 				0AD9D8D826402AA700FEC0E6 /* test_ft_calloc.c in Sources */,
 				0AF1294F26412FFF00663D67 /* test_ft_strtrim.c in Sources */,
+				0AF129542641385E00663D67 /* test_ft_split.c in Sources */,
 				0A3DE6CE26314C5500E62219 /* test_ft_memcpy.c in Sources */,
 				0AF1294A26412A2D00663D67 /* test_ft_strjoin.c in Sources */,
 				0AD9D8D326400C6A00FEC0E6 /* test_ft_strdup.c in Sources */,
@@ -447,6 +454,7 @@
 				0A31FC47263ED2B600DB98B4 /* ft_isdigit.c in Sources */,
 				0A31FC5F263ED40B00DB98B4 /* ft_tolower.c in Sources */,
 				0AF12946264122F000663D67 /* ft_substr.c in Sources */,
+				0AF129552641386400663D67 /* ft_split.c in Sources */,
 				0A57E3A0262E0448003B436E /* ft_bzero.c in Sources */,
 				0A31FC42263ECF7400DB98B4 /* ft_isalpha.c in Sources */,
 				0AF1294B26412A3500663D67 /* ft_strjoin.c in Sources */,
