@@ -30,7 +30,7 @@ typedef void (malloc_logger_t)(unsigned, unsigned, unsigned, unsigned, unsigned,
 // declared in the Libc malloc implementation
 extern malloc_logger_t *malloc_logger;
 
-int malloc_count = 0;
+static int malloc_count = 0;
 
 void print_malloc_record(unsigned type, unsigned arg1, unsigned arg2, unsigned arg3,
 						 unsigned result, unsigned num_hot_frames_to_skip)
