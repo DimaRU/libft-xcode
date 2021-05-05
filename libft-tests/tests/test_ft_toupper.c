@@ -1,9 +1,14 @@
-//
-//  test_ft_toupper.c
-//  libft-tests
-//
-//  Created by Dmitriy Borovikov on 02.05.2021.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test_ft_toupper.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ssantiag <ssantiag@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/05 17:40:17 by ssantiag          #+#    #+#             */
+/*   Updated: 2021/05/05 17:40:17 by ssantiag         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft-tests.h"
 #include <ctype.h>

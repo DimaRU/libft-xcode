@@ -1,9 +1,14 @@
-//
-//  ft_memcmp.c
-//  libft-tests
-//
-//  Created by Dmitriy Borovikov on 23.04.2021.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ssantiag <ssantiag@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/05 17:53:39 by ssantiag          #+#    #+#             */
+/*   Updated: 2021/05/05 17:53:39 by ssantiag         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 typedef unsigned char	t_uchar;

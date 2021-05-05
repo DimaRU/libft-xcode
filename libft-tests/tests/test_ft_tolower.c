@@ -1,9 +1,14 @@
-//
-//  test_ft_tolower.c
-//  libft-tests
-//
-//  Created by Dmitriy Borovikov on 02.05.2021.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test_ft_tolower.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ssantiag <ssantiag@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/05 17:40:05 by ssantiag          #+#    #+#             */
+/*   Updated: 2021/05/05 17:40:05 by ssantiag         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft-tests.h"
 #include <ctype.h>
