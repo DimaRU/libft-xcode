@@ -54,20 +54,38 @@ int	main(void)
 		test_ft_putendl_fd,
 		test_ft_putnbr_fd,
 		
-//		test_ft_lstnew,
-//		test_ft_lstadd_front,
-//		test_ft_lstsize,
-//		test_ft_lstlast,
-//		test_ft_lstadd_back,
-//		test_ft_lstdelone,
-//		test_ft_lstclear,
-//		test_ft_lstiter,
-//		test_ft_lstmap,
+		test_ft_lstnew,
+		test_ft_lstadd_front,
+		test_ft_lstsize,
+		test_ft_lstlast,
+		test_ft_lstadd_back,
+		test_ft_lstdelone,
+		test_ft_lstclear,
+		test_ft_lstiter,
+		test_ft_lstmap,
 	};
 
+	malloc_statistics_t stats;
+	malloc_zone_statistics(NULL, &stats);
+	printf("%zu %u\n", stats.size_in_use, stats.blocks_in_use);
+	unsigned blocks_in_use;
+
+	struct mstats m = mstats();
+	printf("Used chunks %zu %zu %zu\n", m.chunks_used, m.chunks_free, m.bytes_used);
+
 	for (size_t i = 0; i < sizeof(test_list)/sizeof(test_func); i++) {
+		malloc_zone_statistics(NULL, &stats);
+		blocks_in_use = stats.blocks_in_use;
 		test_list[i]();
+		malloc_zone_statistics(NULL, &stats);
+		if (blocks_in_use != stats.blocks_in_use) printf("Leaked blocks: %u\n", stats.blocks_in_use - blocks_in_use);
 	}
+
+	struct mstats m1 = mstats();
+	printf("Used chunks %zu %zu %zu\n", m1.chunks_used, m1.chunks_free, m1.bytes_used);
+
+	malloc_zone_statistics(NULL, &stats);
+	printf("%zu %u\n", stats.size_in_use, stats.blocks_in_use);
 
 	return (0);
 }
