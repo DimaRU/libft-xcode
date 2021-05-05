@@ -18,8 +18,8 @@ void test_ft_strlen(void)
 	char *str2 = "1234";
 	char *str3 = "abcdef\xff";
 
-    printf("Start %s\n", __func__);
-	if (ft_strlen(str1) != 0) printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
-	if (ft_strlen(str2) != 4) printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
-	if (ft_strlen(str3) != 7) printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
+    nomalloc_printf("Start %s\n", __func__);
+	if (ft_strlen(str1) != 0) nomalloc_printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
+	if (ft_strlen(str2) != 4) nomalloc_printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
+	if (ft_strlen(str3) != 7) nomalloc_printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
 }

@@ -15,9 +15,9 @@
 
 void test_ft_toupper(void)
 {
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 
 	for(int i = 0; i < 1024; i++) {
-		if (ft_toupper(i) != toupper(i)) printf("%s %s %X\n", __func__, "test 1 fail: wrong rezult ", i);
+		if (ft_toupper(i) != toupper(i)) nomalloc_printf("%s %s %X\n", __func__, "test 1 fail: wrong rezult ", i);
 	}
 }

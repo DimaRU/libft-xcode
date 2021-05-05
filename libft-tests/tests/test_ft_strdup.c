@@ -19,20 +19,20 @@ void test_ft_strdup(void)
 	char pattern3[] = "123456789 123456";
 	char *rezult;
 
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 
 	rezult = ft_strdup(pattern1);
 	compare_s(pattern1, rezult, sizeof(pattern1), __func__, "test 1 fail:");
-	if (malloc_size(rezult) != 16) printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
+	if (malloc_size(rezult) != 16) nomalloc_printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
 	free(rezult);
 
 	rezult = ft_strdup(pattern2);
 	compare_s(pattern2, rezult, sizeof(pattern2), __func__, "test 2 fail:");
-	if (malloc_size(rezult) != 16) printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
+	if (malloc_size(rezult) != 16) nomalloc_printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
 	free(rezult);
 
 	rezult = ft_strdup(pattern3);
 	compare_s(pattern3, rezult, sizeof(pattern3), __func__, "test 3 fail:");
-	if (malloc_size(rezult) != 32) printf("%s %s\n", __func__, "test 3 fail: wrong rezult");
+	if (malloc_size(rezult) != 32) nomalloc_printf("%s %s\n", __func__, "test 3 fail: wrong rezult");
 	free(rezult);
 }

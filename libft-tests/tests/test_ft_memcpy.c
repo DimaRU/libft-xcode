@@ -19,7 +19,7 @@ void test_ft_memcpy(void)
 	static t_uchar pattern_cpy[] = { 22, 33, 44, 55 };
 	t_uchar pattern_work[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-	printf("Start %s\n", __func__);
+	nomalloc_printf("Start %s\n", __func__);
 	ft_memcpy(pattern_work, pattern_src, 0);
 	compare(pattern_src, pattern_work, sizeof(pattern_src), __func__, "test 1 fail:");
 	ft_memcpy(pattern_work+1, pattern_cpy, sizeof(pattern_cpy));

@@ -17,9 +17,9 @@ void test_ft_lstnew(void)
 	char *content = "dummy string";
 	t_list *list;
 
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 
 	list = ft_lstnew(content);
-	if (list->content != content || list->next != NULL) printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
+	if (list->content != content || list->next != NULL) nomalloc_printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
 	free(list);
 }

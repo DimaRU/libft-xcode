@@ -37,12 +37,12 @@ void test_ft_atoi(void)
 	int rezult_lib;
 	char *pattern;
 
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 
 	for(size_t i = 0; i < sizeof(pattern_list)/sizeof(char*); i++) {
 		pattern = pattern_list[i];
 		rezult_lib = atoi(pattern);
 		rezult_ft = ft_atoi(pattern);
-		if (rezult_ft != rezult_lib) printf("%s test %ld fail: %d must be %d pattern: '%s'\n", __func__, i, rezult_ft, rezult_lib, pattern);
+		if (rezult_ft != rezult_lib) nomalloc_printf("%s test %ld fail: %d must be %d pattern: '%s'\n", __func__, i, rezult_ft, rezult_lib, pattern);
 	}
 }

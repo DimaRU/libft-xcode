@@ -14,11 +14,11 @@
 
 void test_ft_strncmp(void)
 {
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 
-	if (ft_strncmp("1", "2", 0) != 0) printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
-	if (ft_strncmp("", "", 1) != 0) printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
-	if (ft_strncmp("123", "12345", 3) != 0) printf("%s %s\n", __func__, "test 3 fail: wrong rezult");
-	if (ft_strncmp("123", "211", 10) >= 0) printf("%s %s\n", __func__, "test 4 fail: wrong rezult");
-	if (ft_strncmp("321", "123", 10) <= 0) printf("%s %s\n", __func__, "test 5 fail: wrong rezult");
+	if (ft_strncmp("1", "2", 0) != 0) nomalloc_printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
+	if (ft_strncmp("", "", 1) != 0) nomalloc_printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
+	if (ft_strncmp("123", "12345", 3) != 0) nomalloc_printf("%s %s\n", __func__, "test 3 fail: wrong rezult");
+	if (ft_strncmp("123", "211", 10) >= 0) nomalloc_printf("%s %s\n", __func__, "test 4 fail: wrong rezult");
+	if (ft_strncmp("321", "123", 10) <= 0) nomalloc_printf("%s %s\n", __func__, "test 5 fail: wrong rezult");
 }

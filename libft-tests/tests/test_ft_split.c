@@ -21,19 +21,19 @@ void checksplit_and_free(char **ptr, const char *pattern[], int test_no, const c
 {
 	int count;
 	if (ptr == NULL) {
-		printf("%s test %d fail: NULL returned\n", name, test_no);
+		nomalloc_printf("%s test %d fail: NULL returned\n", name, test_no);
 		return;
 	}
 	for (count = 0; pattern[count] != NULL; count++) {
 		if (ptr[count] == NULL) {
-			printf("%s test %d fail: NULL string\n", name, test_no);
+			nomalloc_printf("%s test %d fail: NULL string\n", name, test_no);
 			return;
 		}
 		if (strcmp(ptr[count], pattern[count]) != 0)
-			printf("%s test %d fail: pattern not math\n", name, test_no);
+			nomalloc_printf("%s test %d fail: pattern not math\n", name, test_no);
 		free(ptr[count]);
 	}
-	if (malloc_size(ptr) != round_to_16((count + 1) * sizeof(size_t))) printf("%s test %d fail: wrong alloc size\n", name, test_no);
+	if (malloc_size(ptr) != round_to_16((count + 1) * sizeof(size_t))) nomalloc_printf("%s test %d fail: wrong alloc size\n", name, test_no);
 	free(ptr);
 }
 
@@ -48,9 +48,9 @@ void test_ft_split(void)
 		NULL
 	};
 
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 
-	if (ft_split(NULL, ',') != NULL) printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
+	if (ft_split(NULL, ',') != NULL) nomalloc_printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
 	checksplit_and_free(ft_split("", ','), pattern_empty, 2, __func__);
 	checksplit_and_free(ft_split(",,,,,", ','), pattern_empty, 3, __func__);
 	checksplit_and_free(ft_split("1,2,3,456", ','), pattern1, 4, __func__);

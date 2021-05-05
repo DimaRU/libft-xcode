@@ -16,6 +16,45 @@
 
 typedef void (*test_func)(void);
 
+// defined in Libc/gen/malloc.c
+#define MALLOC_LOG_TYPE_ALLOCATE   2
+#define MALLOC_LOG_TYPE_DEALLOCATE 4
+#define MALLOC_LOG_TYPE_HAS_ZONE   8
+#define MALLOC_LOG_TYPE_CLEARED    64
+#define MALLOC_OP_MALLOC  (MALLOC_LOG_TYPE_ALLOCATE|MALLOC_LOG_TYPE_HAS_ZONE)
+#define MALLOC_OP_CALLOC  (MALLOC_OP_MALLOC|MALLOC_LOG_TYPE_CLEARED)
+#define MALLOC_OP_REALLOC (MALLOC_OP_MALLOC|MALLOC_LOG_TYPE_DEALLOCATE)
+#define MALLOC_OP_FREE    (MALLOC_LOG_TYPE_DEALLOCATE|MALLOC_LOG_TYPE_HAS_ZONE)
+
+typedef void (malloc_logger_t)(unsigned, unsigned, unsigned, unsigned, unsigned,  unsigned);
+// declared in the Libc malloc implementation
+extern malloc_logger_t *malloc_logger;
+
+int malloc_count = 0;
+
+void print_malloc_record(unsigned type, unsigned arg1, unsigned arg2, unsigned arg3,
+						 unsigned result, unsigned num_hot_frames_to_skip)
+{
+	(void)num_hot_frames_to_skip;
+	switch (type) {
+		case MALLOC_OP_MALLOC: // malloc() or valloc()
+		case MALLOC_OP_CALLOC:
+			malloc_count++;
+//			nomalloc_printf("%s : zone=%p, size=%u, pointer=%p\n",
+//							(type == MALLOC_OP_MALLOC) ? "malloc" : "calloc",
+//							arg1, arg2, result);
+			break;
+		case MALLOC_OP_REALLOC:
+			nomalloc_printf("realloc: zone=%p, size=%u, old pointer=%p, ",
+							"new pointer=%p\n", arg1, arg3, arg2, result);
+			break;
+		case MALLOC_OP_FREE:
+			malloc_count--;
+//			nomalloc_printf("free   : zone=%p, pointer=%p\n", arg1, arg2);
+			break;
+	}
+}
+
 int	main(void)
 {
 	static test_func test_list[] = {
@@ -65,27 +104,12 @@ int	main(void)
 		test_ft_lstmap,
 	};
 
-	malloc_statistics_t stats;
-	malloc_zone_statistics(NULL, &stats);
-	printf("%zu %u\n", stats.size_in_use, stats.blocks_in_use);
-	unsigned blocks_in_use;
-
-	struct mstats m = mstats();
-	printf("Used chunks %zu %zu %zu\n", m.chunks_used, m.chunks_free, m.bytes_used);
+	malloc_logger = print_malloc_record;
 
 	for (size_t i = 0; i < sizeof(test_list)/sizeof(test_func); i++) {
-		malloc_zone_statistics(NULL, &stats);
-		blocks_in_use = stats.blocks_in_use;
 		test_list[i]();
-		malloc_zone_statistics(NULL, &stats);
-		if (blocks_in_use != stats.blocks_in_use) printf("Leaked blocks: %u\n", stats.blocks_in_use - blocks_in_use);
+		if (malloc_count != 0) nomalloc_printf("Possible memory leak: %d\n", malloc_count);
 	}
-
-	struct mstats m1 = mstats();
-	printf("Used chunks %zu %zu %zu\n", m1.chunks_used, m1.chunks_free, m1.bytes_used);
-
-	malloc_zone_statistics(NULL, &stats);
-	printf("%zu %u\n", stats.size_in_use, stats.blocks_in_use);
 
 	return (0);
 }

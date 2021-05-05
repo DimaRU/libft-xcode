@@ -14,7 +14,7 @@
 
 void test_ft_putchar_fd(void)
 {
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 	
 	ft_putchar_fd('O', STDOUT_FILENO);
 	ft_putchar_fd('K', STDOUT_FILENO);

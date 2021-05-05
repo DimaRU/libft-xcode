@@ -18,11 +18,11 @@ void test_ft_strrchr(void)
 	static char *pattern2 = "123456789";
 	static char *pattern3 = "";
 
-	printf("Start %s\n", __func__);
-	if (ft_strrchr(pattern1, 'a') != NULL) printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
-	if (ft_strrchr(pattern1, '2') != pattern1 + 1) printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
-	if (ft_strrchr(pattern1, '1') != pattern1 + 9) printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
-	if (ft_strrchr(pattern1, '\0') != pattern1 + 10) printf("%s %s\n", __func__, "test 3 fail: wrong rezult");
-	if (ft_strrchr(pattern2, '1') != pattern2) printf("%s %s\n", __func__, "test 4 fail: wrong rezult");
-	if (ft_strrchr(pattern3, '\0') != pattern3) printf("%s %s\n", __func__, "test 5 fail: wrong rezult");
+	nomalloc_printf("Start %s\n", __func__);
+	if (ft_strrchr(pattern1, 'a') != NULL) nomalloc_printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
+	if (ft_strrchr(pattern1, '2') != pattern1 + 1) nomalloc_printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
+	if (ft_strrchr(pattern1, '1') != pattern1 + 9) nomalloc_printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
+	if (ft_strrchr(pattern1, '\0') != pattern1 + 10) nomalloc_printf("%s %s\n", __func__, "test 3 fail: wrong rezult");
+	if (ft_strrchr(pattern2, '1') != pattern2) nomalloc_printf("%s %s\n", __func__, "test 4 fail: wrong rezult");
+	if (ft_strrchr(pattern3, '\0') != pattern3) nomalloc_printf("%s %s\n", __func__, "test 5 fail: wrong rezult");
 }

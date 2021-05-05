@@ -14,7 +14,7 @@
 
 void test_ft_putendl_fd(void)
 {
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 
 	ft_putendl_fd("OK", STDOUT_FILENO);
 }

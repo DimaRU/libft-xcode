@@ -14,5 +14,5 @@
 
 void test_ft_lstadd_front(void)
 {
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 }

@@ -14,7 +14,7 @@
 
 void test_ft_itoa(void)
 {
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 
 	checkpattern_and_free(ft_itoa(0), "0", 16, 1, __func__);
 	checkpattern_and_free(ft_itoa(-1), "-1", 16, 1, __func__);

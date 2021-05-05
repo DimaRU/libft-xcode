@@ -14,7 +14,7 @@
 
 void test_ft_putstr_fd(void)
 {
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 
 	ft_putstr_fd("OK\n", STDOUT_FILENO);
 }

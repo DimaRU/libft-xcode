@@ -14,8 +14,23 @@
 #define libft_test_h
 #include "libft.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <stdarg.h>
 #include <malloc/malloc.h>
+
+//#ifndef _NOMALLOC_PRINTF_H
+//#define _NOMALLOC_PRINTF_H
+extern void _simple_vdprintf(int, const char *, va_list);
+static inline void nomalloc_printf(const char *format, ...)
+{
+	va_list ap;
+
+	va_start(ap, format);
+	_simple_vdprintf(STDOUT_FILENO, format, ap);
+	va_end(ap);
+}
+//#endif
 
 typedef unsigned char	t_uchar;
 // Common tools

@@ -14,12 +14,12 @@
 
 void test_ft_putnbr_fd(void)
 {
-    printf("Start %s\n", __func__);
+    nomalloc_printf("Start %s\n", __func__);
 
 	ft_putnbr_fd(0, STDOUT_FILENO);
-	ft_putchar_fd('\n', STDOUT_FILENO);
+	ft_putchar_fd(' ', STDOUT_FILENO);
 	ft_putnbr_fd(2147483647, STDOUT_FILENO);
-	ft_putchar_fd('\n', STDOUT_FILENO);
+	ft_putchar_fd(' ', STDOUT_FILENO);
 	ft_putnbr_fd(-2147483648, STDOUT_FILENO);
 	ft_putchar_fd('\n', STDOUT_FILENO);
 }
