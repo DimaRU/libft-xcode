@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	buffer[10];
+	char	buffer[12];
 	int		index;
 
 	if (n < 0)

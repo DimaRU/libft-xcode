@@ -23,9 +23,9 @@ void test_ft_strlcpy(void)
 
     nomalloc_printf("Start %s\n", __func__);
 	if (ft_strlcpy(str_dest, pattern1, 0) != 9) nomalloc_printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
-	compare_s(pattern1, str_dest, sizeof(pattern1) + 1, __func__, "test 1 fail:");
+	compare_s(pattern1, str_dest, sizeof(pattern1), __func__, "test 1 fail:");
 	if (ft_strlcpy(str_dest, str2, 9) != 4) nomalloc_printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
-	compare_s(pattern2, str_dest, sizeof(pattern2) + 1, __func__, "test 2 fail:");
+	compare_s(pattern2, str_dest, sizeof(pattern2), __func__, "test 2 fail:");
 	if (ft_strlcpy(str_dest, str3, 2) != 3) nomalloc_printf("%s %s\n", __func__, "test 3 fail: wrong rezult");
-	compare_s(pattern3, str_dest, sizeof(pattern3) + 1, __func__, "test 3 fail:");
+	compare_s(pattern3, str_dest, sizeof(pattern3), __func__, "test 3 fail:");
 }

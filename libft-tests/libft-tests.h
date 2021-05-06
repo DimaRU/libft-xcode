@@ -19,8 +19,6 @@
 #include <stdarg.h>
 #include <malloc/malloc.h>
 
-//#ifndef _NOMALLOC_PRINTF_H
-//#define _NOMALLOC_PRINTF_H
 extern void _simple_vdprintf(int, const char *, va_list);
 static inline void nomalloc_printf(const char *format, ...)
 {
@@ -30,7 +28,6 @@ static inline void nomalloc_printf(const char *format, ...)
 	_simple_vdprintf(STDOUT_FILENO, format, ap);
 	va_end(ap);
 }
-//#endif
 
 typedef unsigned char	t_uchar;
 // Common tools
@@ -38,6 +35,7 @@ void compare(t_uchar *a, t_uchar *b, size_t n, const char *name, char *error_mes
 void compare_s(char *a, char *b, size_t n, const char *name, char *error_message);
 void checkzero_and_free(char *ptr, size_t size, size_t alloc_size, int test_no, const char *name);
 void checkpattern_and_free(char *ptr, const char *pattern, size_t alloc_size, int test_no, const char *name);
+void check_malloc(void *ptr, size_t alloc_size, int test_no, const char *name);
 
 // Test per function
 void test_ft_bzero(void);

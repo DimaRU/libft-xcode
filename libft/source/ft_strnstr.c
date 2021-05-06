@@ -19,17 +19,18 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	if (*little == '\0')
 		return ((char *)big);
-	ptr = big - 1;
-	while (++ptr < big + len)
+	ptr = big;
+	while (ptr < big + len && *ptr != '\0')
 	{
 		offset = 0;
-		while (ptr[offset] != '\0' && ptr + offset != big + len)
+		while (ptr + offset < big + len && ptr[offset] != '\0')
 		{
 			if (ptr[offset] != little[offset])
 				break ;
 			if (little[++offset] == '\0')
 				return ((char *)ptr);
 		}
+		ptr++;
 	}
 	return (NULL);
 }

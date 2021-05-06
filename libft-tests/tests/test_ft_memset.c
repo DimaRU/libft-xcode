@@ -19,9 +19,9 @@ void test_ft_memset(void)
 	t_uchar pattern_work[] = { 1, 2, 3, 4, 5, 6, 7 };
 
 	nomalloc_printf("Start %s\n", __func__);
-	ft_memset(pattern_work, 99, 0);
+	if (ft_memset(pattern_work, 99, 0) != pattern_work) nomalloc_printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
 	compare(pattern_src, pattern_work, sizeof(pattern_src), __func__, "test 1 fail:");
-	ft_memset(pattern_work, 9, 5);
+	if (ft_memset(pattern_work, 9, 5) != pattern_work) nomalloc_printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
 	compare(pattern_dst, pattern_work, sizeof(pattern_src), __func__, "test 2 fail:");
 
 }

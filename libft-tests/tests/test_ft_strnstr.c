@@ -23,4 +23,6 @@ void test_ft_strnstr(void)
 	if (ft_strnstr(pattern1, "789", 9) != pattern1 + 6) nomalloc_printf("%s %s\n", __func__, "test 4 fail: wrong rezult");
 	if (ft_strnstr(pattern1, "789", 10) != pattern1 + 6) nomalloc_printf("%s %s\n", __func__, "test 5 fail: wrong rezult");
 	if (ft_strnstr(pattern1, "788", 9) != NULL) nomalloc_printf("%s %s\n", __func__, "test 6 fail: wrong rezult");
+	if (ft_strnstr("lorem ipsum dolor sit amet", "ipsumm", 30) != NULL) nomalloc_printf("%s %s\n", __func__, "test 7 fail: wrong rezult");
+	if (ft_strnstr("lorem ipsum dolor sit amet", "consectetur", 30) != NULL) nomalloc_printf("%s %s\n", __func__, "test 8 fail: wrong rezult");
 }

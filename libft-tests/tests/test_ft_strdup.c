@@ -23,16 +23,16 @@ void test_ft_strdup(void)
 
 	rezult = ft_strdup(pattern1);
 	compare_s(pattern1, rezult, sizeof(pattern1), __func__, "test 1 fail:");
-	if (malloc_size(rezult) != 16) nomalloc_printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
+	check_malloc(rezult, 1, 1, __func__);
 	free(rezult);
 
 	rezult = ft_strdup(pattern2);
 	compare_s(pattern2, rezult, sizeof(pattern2), __func__, "test 2 fail:");
-	if (malloc_size(rezult) != 16) nomalloc_printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
+	check_malloc(rezult, 5, 2, __func__);
 	free(rezult);
 
 	rezult = ft_strdup(pattern3);
 	compare_s(pattern3, rezult, sizeof(pattern3), __func__, "test 3 fail:");
-	if (malloc_size(rezult) != 32) nomalloc_printf("%s %s\n", __func__, "test 3 fail: wrong rezult");
+	check_malloc(rezult, 17, 3, __func__);
 	free(rezult);
 }

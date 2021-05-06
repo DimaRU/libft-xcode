@@ -33,7 +33,7 @@ void checksplit_and_free(char **ptr, const char *pattern[], int test_no, const c
 			nomalloc_printf("%s test %d fail: pattern not math\n", name, test_no);
 		free(ptr[count]);
 	}
-	if (malloc_size(ptr) != round_to_16((count + 1) * sizeof(size_t))) nomalloc_printf("%s test %d fail: wrong alloc size\n", name, test_no);
+	check_malloc(ptr, (count + 1) * sizeof(size_t), test_no, name);
 	free(ptr);
 }
 

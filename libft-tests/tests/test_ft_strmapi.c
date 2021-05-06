@@ -28,8 +28,8 @@ void test_ft_strmapi(void)
 {
     nomalloc_printf("Start %s\n", __func__);
 
-	checkpattern_and_free(ft_strmapi("", mapi1), "", 16, 1, __func__);
-	checkpattern_and_free(ft_strmapi("54321", mapi1), "abcde", 16, 1, __func__);
-	checkpattern_and_free(ft_strmapi("54321", mapi1), "abcde", 16, 1, __func__);
-	checkpattern_and_free(ft_strmapi("654321", mapi2), "543210", 16, 1, __func__);
+	checkpattern_and_free(ft_strmapi("", mapi1), "", 1, 1, __func__);
+	checkpattern_and_free(ft_strmapi("54321", mapi1), "abcde", 6, 1, __func__);
+	checkpattern_and_free(ft_strmapi("54321", mapi1), "abcde", 6, 1, __func__);
+	checkpattern_and_free(ft_strmapi("654321", mapi2), "543210", 7, 1, __func__);
 }

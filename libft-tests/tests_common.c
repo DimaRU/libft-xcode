@@ -34,7 +34,7 @@ void checkzero_and_free(char *ptr, size_t size, size_t alloc_size, int test_no, 
 	for (size_t i = 0; i < size; i++) {
 		if (ptr[i] != '\0') nomalloc_printf("%s test %d fail: not zeroed\n", name, test_no);
 	}
-	if (malloc_size(ptr) != alloc_size) nomalloc_printf("%s test %d fail: wrong alloc size\n", name, test_no);
+	check_malloc(ptr, alloc_size, test_no, name);
 	free(ptr);
 }
 
@@ -46,6 +46,11 @@ void checkpattern_and_free(char *ptr, const char *pattern, size_t alloc_size, in
 	}
 	if (strcmp(ptr, pattern) != 0)
 		nomalloc_printf("%s test %d fail: pattern not math\n", name, test_no);
-	if (malloc_size(ptr) != alloc_size) nomalloc_printf("%s test %d fail: wrong alloc size\n", name, test_no);
+	check_malloc(ptr, alloc_size, test_no, name);
 	free(ptr);
+}
+
+void check_malloc(void *ptr, size_t alloc_size, int test_no, const char *name)
+{
+	if (malloc_size(ptr) != alloc_size) nomalloc_printf("%s test %d fail: wrong alloc size %d\n", name, test_no, malloc_size(ptr));
 }

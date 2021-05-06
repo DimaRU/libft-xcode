@@ -20,8 +20,9 @@ void test_ft_memcpy(void)
 	t_uchar pattern_work[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
 	nomalloc_printf("Start %s\n", __func__);
-	ft_memcpy(pattern_work, pattern_src, 0);
-	compare(pattern_src, pattern_work, sizeof(pattern_src), __func__, "test 1 fail:");
-	ft_memcpy(pattern_work+1, pattern_cpy, sizeof(pattern_cpy));
-	compare(pattern_dst, pattern_work, sizeof(pattern_work), __func__, "test 2 fail:");
+	if (ft_memcpy(NULL, NULL, 10) != NULL) nomalloc_printf("%s %s\n", __func__, "test 1 fail: wrong rezult");
+	if (ft_memcpy(pattern_work, pattern_src, 0) != pattern_work) nomalloc_printf("%s %s\n", __func__, "test 2 fail: wrong rezult");
+	compare(pattern_src, pattern_work, sizeof(pattern_src), __func__, "test 2 fail:");
+	if (ft_memcpy(pattern_work+1, pattern_cpy, sizeof(pattern_cpy)) != pattern_work+1) nomalloc_printf("%s %s\n", __func__, "test 3 fail: wrong rezult");
+	compare(pattern_dst, pattern_work, sizeof(pattern_work), __func__, "test 3 fail:");
 }

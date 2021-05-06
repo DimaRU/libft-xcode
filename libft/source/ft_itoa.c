@@ -17,7 +17,7 @@ char	*ft_itoa(int n)
 	int		sign;
 	char	*ptr;
 	char	*rezult;
-	char	buffer[11];
+	char	buffer[12];
 
 	sign = 1;
 	if (n < 0)
