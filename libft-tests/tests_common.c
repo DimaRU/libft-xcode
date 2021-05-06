@@ -52,5 +52,5 @@ void checkpattern_and_free(char *ptr, const char *pattern, size_t alloc_size, in
 
 void check_malloc(void *ptr, size_t alloc_size, int test_no, const char *name)
 {
-	if (malloc_size(ptr) != alloc_size) nomalloc_printf("%s test %d fail: wrong alloc size %d\n", name, test_no, malloc_size(ptr));
+	if (malloc_size(ptr) != malloc_good_size(alloc_size)) nomalloc_printf("%s test %d fail: wrong alloc size %d\n", name, test_no, malloc_size(ptr));
 }

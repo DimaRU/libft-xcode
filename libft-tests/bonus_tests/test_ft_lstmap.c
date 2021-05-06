@@ -59,6 +59,13 @@ void test_ft_lstmap(void)
 		element = element->next;
 	}
 
+	element = list;
+	for (int i = 0; i <= 999; i++) {
+		if (i != ft_atoi(element->content)) nomalloc_printf("%s %s %s!=%d\n", __func__, "test 2 fail: wrong rezult ", element->content, i);
+		element = element->next;
+	}
+
 	ft_lstclear(&mapped_list, free);
+	ft_lstclear(&list, free);
 	if (mapped_list != NULL) nomalloc_printf("%s %s\n", __func__, "test 3 fail: not null ");
 }
