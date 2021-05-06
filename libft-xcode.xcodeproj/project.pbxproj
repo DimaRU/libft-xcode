@@ -244,9 +244,9 @@
 				0A31834F2642FF0500DFAA5C /* ft_lstdelone.c */,
 				0A31834C2642FF0400DFAA5C /* ft_lstiter.c */,
 				0A31834D2642FF0500DFAA5C /* ft_lstlast.c */,
-				0A3183522642FF0500DFAA5C /* ft_lstmap.c */,
 				0A3183512642FF0500DFAA5C /* ft_lstnew.c */,
 				0A3183502642FF0500DFAA5C /* ft_lstsize.c */,
+				0A3183522642FF0500DFAA5C /* ft_lstmap.c */,
 			);
 			path = bonus;
 			sourceTree = "<group>";

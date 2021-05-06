@@ -17,6 +17,11 @@ void test_ft_lstdelone(void)
 	t_list *element;
     nomalloc_printf("Start %s\n", __func__);
 
+	element = malloc(sizeof(t_list));
+	element->content = "test";
+	element->next = element;
+	ft_lstdelone(element, NULL);
+
 	for (int i = 0; i < 1000; i++) {
 		element = malloc(sizeof(t_list));
 		element->content = ft_itoa(i);

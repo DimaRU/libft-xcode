@@ -25,12 +25,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_element = ft_lstnew(f(lst->content));
 		if (new_element == NULL)
 		{
-			ft_lstclear(&lst, del);
 			ft_lstclear(&new, del);
+			if (del != NULL)
+				ft_lstclear(&lst, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&new, new_element);
-		ft_lstdelone(lst, del);
+		if (del != NULL)
+			ft_lstdelone(lst, del);
 		lst = next;
 	}
 	return (new);
