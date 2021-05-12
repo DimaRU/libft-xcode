@@ -68,11 +68,11 @@ CFLAGS_TEST = -Wextra -Wall -Werror -g3 -fsanitize=address
 
 all:	${NAME}
 
-$(NAME): ${OBJ}
-		$(AR) ${NAME} ${OBJ}
+$(NAME): $(OBJ)
+		$(AR) $(NAME) $(OBJ)
 
 bonus: all $(OBJB)
-		$(AR) $(NAME) $(OBJB)
+		$(AR) $(NAME) $(OBJB) $(OBJ)
 
 %.o: %.c $(INCLUDE)/libft.h
 		$(CC) -c $(CFLAGS_TEST) -I $(INCLUDE) -o $@ $<
@@ -82,7 +82,7 @@ clean:
 		rm -f $(OBJB)
 
 fclean:	clean
-		rm -f ${NAME}
+		rm -f $(NAME)
 
 re:		fclean all
 

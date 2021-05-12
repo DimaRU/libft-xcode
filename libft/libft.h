@@ -43,6 +43,10 @@ int		ft_toupper(int c);
 char	*ft_strdup(const char *s1);
 void	*ft_calloc(size_t nmemb, size_t size);
 
+/*
+No functions especially protected from NULL pointer argument
+This is for early bug detection.
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
