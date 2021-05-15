@@ -15,10 +15,13 @@ typedef unsigned char	t_uchar;
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
+	const t_uchar	*ptr;
+
+	ptr = s;
 	while (n-- > 0)
 	{
-		if (*(t_uchar *)s++ == (t_uchar) c)
-			return ((void *)s - 1);
+		if (*ptr++ == (t_uchar) c)
+			return ((void *)(ptr - 1));
 	}
 	return (NULL);
 }

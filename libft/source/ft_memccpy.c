@@ -15,11 +15,16 @@ typedef unsigned char	t_uchar;
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
+	t_uchar			*dest;
+	const t_uchar	*source;
+
+	dest = dst;
+	source = src;
 	while (n-- != 0)
 	{
-		*(t_uchar *)dst++ = *(t_uchar *)src;
-		if (*(t_uchar *)src++ == (t_uchar)c)
-			return (dst);
+		*dest++ = *source;
+		if (*source++ == (t_uchar)c)
+			return (dest);
 	}
 	return (NULL);
 }
